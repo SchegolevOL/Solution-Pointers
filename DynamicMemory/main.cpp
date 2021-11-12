@@ -59,31 +59,31 @@ template<typename T> void clear(T** matrix, size_t rows, size_t columns); //Оч
 template<typename T> T** push_row_back(T** matrix, size_t& rows, size_t columns);//Добавляет строку в конец массива
 
 
-template<typename T> T** push_row_front(T** matrix, size_t& rows, size_t columns);//Добавляет строку в начало массива
+template<typename T> void push_row_front(T**& matrix, size_t& rows, size_t columns);//Добавляет строку в начало массива
 
-template<typename T> T** push_col_back(T** matrix, size_t rows, size_t& columns);//Добавляет столбец в конец массива
+template<typename T> void push_col_back(T**& matrix, size_t rows, size_t& columns);//Добавляет столбец в конец массива
 
-template<typename T> T** push_col_front(T** matrix, size_t rowns, size_t& columns);//Добавляет столбец в начало массива
-
-
-template<typename T> T** pop_row_back(T** matrix, size_t& rows, size_t columns);		//Удаляет строку с конец массива
-
-template<typename T> T** pop_row_front(T** matrix, size_t& rows, size_t columns);		//Удаляет строку с начала массива
-
-template<typename T> T** pop_col_back(T** matrix, size_t rows, size_t& columns);		//Удаляет столбец с конец массива
-
-template<typename T> T** pop_col_front(T** matrix, size_t rows, size_t& columns);		//Удаляет столбец с начала массива
+template<typename T> void push_col_front(T**& matrix, size_t rowns, size_t& columns);//Добавляет столбец в начало массива
 
 
-template<typename T> T** insert_row(T** matrix, size_t& rows, size_t columns, size_t index);//Добавляет строку в двумерный динамический массив по указанному индексу
+template<typename T> void pop_row_back(T**& matrix, size_t& rows, size_t columns);		//Удаляет строку с конец массива
 
-template<typename T> T** erase_row(T** matrix, size_t& rows, size_t columns, size_t index);		//Удаляет строку из двумерного динамического массива по указанному индексу
+template<typename T> void pop_row_front(T**& matrix, size_t& rows, size_t columns);		//Удаляет строку с начала массива
+
+template<typename T> void pop_col_back(T**& matrix, size_t rows, size_t& columns);		//Удаляет столбец с конец массива
+
+template<typename T> void pop_col_front(T**& matrix, size_t rows, size_t& columns);		//Удаляет столбец с начала массива
 
 
-template<typename T> T** insert_col(T** matrix, size_t rows, size_t& columns, size_t index);	//Добавляет столбец в двумерный динамический массив по указанному индексу
+template<typename T> void insert_row(T**& matrix, size_t& rows, size_t columns, size_t index);//Добавляет строку в двумерный динамический массив по указанному индексу
+
+template<typename T> void erase_row(T**& matrix, size_t& rows, size_t index);		//Удаляет строку из двумерного динамического массива по указанному индексу
 
 
-template<typename T> T** erase_col(T** matrix, size_t rows, size_t& columns, size_t index);		//Удаляет столбец из двумерного динамического массива по указанному индексу
+template<typename T> void insert_col(T**& matrix, size_t rows, size_t& columns, size_t index);	//Добавляет столбец в двумерный динамический массив по указанному индексу
+
+
+template<typename T> void erase_col(T**& matrix, size_t rows, size_t& columns, size_t index);		//Удаляет столбец из двумерного динамического массива по указанному индексу
 
 
 template<typename T> void PrintMatrix(T** matrix, size_t rows, size_t columns);
@@ -354,7 +354,6 @@ template<typename T> void push_back(T*& array, size_t& length, T element)//До�
 	array = tmp;
 }
 
-
 template<typename T> void push_front(T*& array, size_t& length, T element)//Добавляет значение в начало массива
 {
 	++length;
@@ -433,7 +432,6 @@ template<typename T> void erase(T*& array, size_t& length, size_t position)//У�
 	array = tmp;
 }
 
-
 template<typename T> T** allocate(size_t rowns, size_t columns)//Выделяет память под двумерный динамический массив
 {
 	T** matrix = new T* [rowns];
@@ -441,7 +439,6 @@ template<typename T> T** allocate(size_t rowns, size_t columns)//Выделяе�
 		matrix[i] = new T[columns];
 	return matrix;
 }
-
 
 template<typename T> void clear(T** matrix, size_t rows, size_t columns)//Очищает память, занимаемую двумерным динамическим массивом
 {
@@ -487,115 +484,40 @@ template<typename> void push_col_back(T**& matrix, size_t rows, size_t& columns)
 	columns++;
 }
 
-int** push_col_front(int** matrix, size_t rows, size_t& columns)//Добавляет столбец в начало массива
+template <typename> void push_col_front(T**& matrix, size_t rows, size_t& columns)//Добавляет столбец в начало массива
 {
 	for (size_t i = 0; i < rows; i++)
 	{
 		size_t tmp = columns;
-		int* arr = new int[tmp + 1]{};
+		T* arr = new T[tmp + 1]{};
 		push_front(&matrix[i], tmp, *arr);
 	}
 	columns++;
-	return matrix;
 }
 
-double** push_col_front(double** matrix, size_t rows, size_t& columns)
+template <typename> void pop_row_back(T**& matrix, size_t& rows, size_t columns)//Удаляет строку с конец массива
 {
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		double* arr = new double[tmp + 1]{};
-		push_front(&matrix[i], tmp, *arr);
-	}
-	columns++;
-	return matrix;
-}
-
-char** push_col_front(char** matrix, size_t rows, size_t& columns)
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		char* arr = new char[tmp + 1]{};
-		push_front(&matrix[i], tmp, *arr);
-	}
-	columns++;
-	return matrix;
-}
-
-int** pop_row_back(int** matrix, size_t& rows, size_t columns)//Удаляет строку с конец массива
-{
-	int** tmp = new int* [rows - 1];
+	T** tmp = new T* [rows - 1];
 	for (size_t i = 0; i < rows - 1; i++)
 	{
 		tmp[i] = matrix[i];
 	}
 	rows--;
-	delete[]matrix;
-	return tmp;
+	matrix = tmp;
 }
 
-double** pop_row_back(double** matrix, size_t& rows, size_t columns)
+template<typename> void pop_row_front(T**& matrix, size_t& rows, size_t columns)		//Удаляет строку с начала массива
 {
-	double** tmp = new double* [rows - 1];
-	for (size_t i = 0; i < rows - 1; i++)
-	{
-		tmp[i] = matrix[i];
-	}
-	rows--;
-	delete[]matrix;
-	return tmp;
-}
-
-char** pop_row_back(char** matrix, size_t& rows, size_t columns)
-{
-	char** tmp = new char* [rows - 1];
-	for (size_t i = 0; i < rows - 1; i++)
-	{
-		tmp[i] = matrix[i];
-	}
-	rows--;
-	delete[]matrix;
-	return tmp;
-}
-
-int** pop_row_front(int** matrix, size_t& rows, size_t columns)		//Удаляет строку с начала массива
-{
-	int** tmp = new int* [rows - 1];
+	T** tmp = new T* [rows - 1];
 	for (size_t i = 0; i < rows - 1; i++)
 	{
 		tmp[i] = matrix[i + 1];
 	}
 	rows--;
-	delete[]matrix;
-	return tmp;
+	matrix = tmp;
 }
 
-double** pop_row_front(double** matrix, size_t& rows, size_t columns)
-{
-	double** tmp = new double* [rows - 1];
-	for (size_t i = 0; i < rows - 1; i++)
-	{
-		tmp[i] = matrix[i + 1];
-	}
-	rows--;
-	delete[]matrix;
-	return tmp;
-}
-
-char** pop_row_front(char** matrix, size_t& rows, size_t columns)
-{
-	char** tmp = new char* [rows - 1];
-	for (size_t i = 0; i < rows - 1; i++)
-	{
-		tmp[i] = matrix[i + 1];
-	}
-	rows--;
-	delete[]matrix;
-	return tmp;
-}
-
-int** pop_col_back(int** matrix, size_t rows, size_t& columns)//Удаляет столбец с конец массива
+template <typename> pop_col_back(T**& matrix, size_t rows, size_t& columns)//Удаляет столбец с конец массива
 {
 	for (size_t i = 0; i < rows; i++)
 	{
@@ -604,255 +526,62 @@ int** pop_col_back(int** matrix, size_t rows, size_t& columns)//Удаляет �
 		pop_back(&matrix[i], tmp);
 	}
 	columns--;
-	return matrix;
 }
 
-double** pop_col_back(double** matrix, size_t rows, size_t& columns)
+template <typename> void pop_col_front(T**& matrix, size_t rows, size_t& columns)		//Удаляет столбец с начала массива
 {
 	for (size_t i = 0; i < rows; i++)
 	{
 		size_t tmp = columns;
-		double* arr = new double[tmp] {};
-		pop_back(&matrix[i], tmp);
-	}
-	columns--;
-	return matrix;
-}
-
-char** pop_col_back(char** matrix, size_t rows, size_t& columns)
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		double* arr = new double[tmp] {};
-		pop_back(&matrix[i], tmp);
-	}
-	columns--;
-	return matrix;
-}
-
-int** pop_col_front(int** matrix, size_t rows, size_t& columns)		//Удаляет столбец с начала массива
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		int* arr = new int[tmp - 1]{};
+		T* arr = new T[tmp - 1]{};
 		pop_front(&matrix[i], tmp);
 	}
 	columns--;
-	return matrix;
 }
 
-double** pop_col_front(double** matrix, size_t rows, size_t& columns)
+template <typename> void insert_row(T**& matrix, size_t& rows, size_t columns, size_t index)//Добавляет строку в двумерный динамический массив по указанному индексу
 {
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		double* arr = new double[tmp - 1]{};
-		pop_front(&matrix[i], tmp);
-	}
-	columns--;
-	return matrix;
+	T* tmp = new T[columns]{};
+	insert(matrix, rows, index, tmp);
 }
 
-char** pop_col_front(char** matrix, size_t rows, size_t& columns)
+template<typename> void erase_row(T**& matrix, size_t& rows, size_t index) //Удаляет строку из двумерного динамического массива по указанному индексу
 {
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		char* arr = new char[tmp - 1]{};
-		pop_front(&matrix[i], tmp);
-	}
-	columns--;
-	return matrix;
+	erase(matrix, rows, index);
 }
 
-int** insert_row(int** matrix, size_t& rows, size_t columns, size_t index)//Добавляет строку в двумерный динамический массив по указанному индексу
-{
-	if (index > rows)return matrix;
-
-	int** tmp = new int* [rows + 1]{};
-	for (int i = 0; i < index; i++)
-		tmp[i] = matrix[i];
-	for (int i = index; i < rows; i++)
-		tmp[i + 1] = matrix[i];
-	delete[] matrix;
-	tmp[index] = new int[columns] {};
-	rows++;
-	return tmp;
-}
-
-double** insert_row(double** matrix, size_t& rows, size_t columns, size_t index)
-{
-	if (index > rows)return matrix;
-
-	double** tmp = new double* [rows + 1]{};
-	for (int i = 0; i < index; i++)
-		tmp[i] = matrix[i];
-	for (int i = index; i < rows; i++)
-		tmp[i + 1] = matrix[i];
-	delete[] matrix;
-	tmp[index] = new int[columns] {};
-	rows++;
-	return tmp;
-}
-
-char** insert_row(char** matrix, size_t& rows, size_t columns, size_t index)
-{
-	if (index > rows)return matrix;
-
-	char** tmp = new char* [rows + 1]{};
-	for (int i = 0; i < index; i++)
-		tmp[i] = matrix[i];
-	for (int i = index; i < rows; i++)
-		tmp[i + 1] = matrix[i];
-	delete[] matrix;
-	tmp[index] = new int[columns] {};
-	rows++;
-	return tmp;
-}
-
-int** erase_row(int** matrix, size_t& rows, size_t columns, size_t index) //Удаляет строку из двумерного динамического массива по указанному индексу
-{
-	int** tmp = new int* [rows - 1];
-	if (index >= rows)return matrix;
-	for (size_t i = 0; i < index; i++)
-	{
-		tmp[i] = matrix[i];
-	}
-	for (size_t i = index; i < rows; i++)
-	{
-		tmp[i] = matrix[i + 1];
-	}
-	delete[] matrix;
-	rows--;
-	return tmp;
-}
-
-double** erase_row(double** matrix, size_t& rows, size_t columns, size_t index)
-{
-	double** tmp = new double* [rows - 1];
-	if (index >= rows)return matrix;
-	for (size_t i = 0; i < index; i++)
-	{
-		tmp[i] = matrix[i];
-	}
-	for (size_t i = index; i < rows; i++)
-	{
-		tmp[i] = matrix[i + 1];
-	}
-	delete[] matrix;
-	rows--;
-	return tmp;
-}
-char** erase_row(char** matrix, size_t& rows, size_t columns, size_t index)
-{
-	char** tmp = new char* [rows - 1];
-	if (index >= rows)return matrix;
-	for (size_t i = 0; i < index; i++)
-	{
-		tmp[i] = matrix[i];
-	}
-	for (size_t i = index; i < rows; i++)
-	{
-		tmp[i] = matrix[i + 1];
-	}
-	delete[] matrix;
-	rows--;
-	return tmp;
-}
-
-int** insert_col(int** matrix, size_t rows, size_t& columns, size_t index)	//Добавляет столбец в двумерный динамический массив по указанному индексу
+template<typename> void insert_col(int**& matrix, size_t rows, size_t& columns, size_t index)	//Добавляет столбец в двумерный динамический массив по указанному индексу
 {
 	if (index > columns) return matrix;
 
 	for (size_t i = 0; i < rows; i++)
 	{
-		size_t tmp = columns;
-		int* arr = new int[tmp + 1]{};
-		insert(&matrix[i], tmp, index, *arr);
+		T* arr = new T[columns + 1]{};
+		insert(&matrix[i], columns, index, *arr);
 	}
 	columns++;
-	return matrix;
 }
 
-double** insert_col(double** matrix, size_t rows, size_t& columns, size_t index)
-{
-	if (index > columns) return matrix;
-
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		double* arr = new double[tmp + 1]{};
-		insert(&matrix[i], tmp, index, *arr);
-	}
-	columns++;
-	return matrix;
-}
-
-char** insert_col(char** matrix, size_t rows, size_t& columns, size_t index)
-{
-	if (index > columns) return matrix;
-
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		char* arr = new char[tmp + 1]{};
-		insert(&matrix[i], tmp, index, *arr);
-	}
-	columns++;
-	return matrix;
-}
-
-int** erase_col(int** matrix, size_t rows, size_t& columns, size_t index)		//Удаляет столбец из двумерного динамического массива по указанному индексу
+template<typename> void erase_col(T**& matrix, size_t rows, size_t& columns, size_t index)		//Удаляет столбец из двумерного динамического массива по указанному индексу
 {
 	if (index >= columns) return matrix;
 
 	for (size_t i = 0; i < rows; i++)
 	{
 		size_t tmp = columns;
-		int* arr = new int[tmp - 1]{};
+		T* arr = new T[tmp - 1]{};
 		erase(&matrix[i], tmp, index);
 	}
 	columns--;
-	return matrix;
 }
 
-double** erase_col(double** matrix, size_t rows, size_t& columns, size_t index)
-{
-	if (index >= columns) return matrix;
-
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		double* arr = new double[tmp - 1]{};
-		erase(&matrix[i], tmp, index);
-	}
-	columns--;
-	return matrix;
-}
-
-char** erase_col(char** matrix, size_t rows, size_t& columns, size_t index)
-{
-	if (index >= columns) return matrix;
-
-	for (size_t i = 0; i < rows; i++)
-	{
-		size_t tmp = columns;
-		char* arr = new char[tmp - 1]{};
-		erase(&matrix[i], tmp, index);
-	}
-	columns--;
-	return matrix;
-}
-
-void PrintMatrix(int** matrix, size_t rowns, size_t columns)
+template<typename> void PrintMatrix(T** matrix, size_t rowns, size_t columns)
 {
 	for (size_t i = 0; i < rowns; i++)
 	{
 		for (size_t j = 0; j < columns; j++)
 		{
-			cout << matrix[i][j] << " ";
+			cout << matrix[i][j] << "   ";
 		}
 		cout << endl;
 	}
@@ -863,10 +592,22 @@ void RandMatrix(int** Matrix, size_t rowns, size_t columns, int begin, int end)
 {
 	for (size_t i = 0; i < rowns; i++)
 	{
-		for (size_t j = 0; j < columns; j++)
-		{
-			Matrix[i][j] = rand() % (end - begin + 1) + begin;
+		FillRand(Matrix[i], columns, begin, end)
+	}
+}
 
-		}
+void RandMatrix(double** Matrix, size_t rowns, size_t columns, int begin, int end, int acc)
+{
+	for (size_t i = 0; i < rowns; i++)
+	{
+		FillRand(Matrix[i], columns, begin, end, acc)
+	}
+}
+
+void RandMatrix(char** Matrix, size_t rowns, size_t columns, int begin, int end)
+{
+	for (size_t i = 0; i < rowns; i++)
+	{
+		FillRand(Matrix[i], columns, begin, end)
 	}
 }
