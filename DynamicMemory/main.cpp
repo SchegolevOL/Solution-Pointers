@@ -1,27 +1,27 @@
-/*void FillRand(???)		//Заполнение массива случайными числами++
-void Print(???)			//Вывод массива на экран++
+п»ї/*void FillRand(???)		//Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё++
+void Print(???)			//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ++
 
-??? push_back(???);		//Добавляет значение в конец массива++
-??? push_front(???);	//Добавляет значение в начало массива++
-??? insert(???);		//Добавляет значение в массив по указанному индексу++
-??? pop_back(???);		//Удаляет последний элемент из массива++
-??? pop_front(???);		//Удаляет нулевой элемент из массива++
-??? erase(???);			//Удаляет значение из массива по указанному индексу++
+??? push_back(???);		//Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°++
+??? push_front(???);	//Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°++
+??? insert(???);		//Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ++
+??? pop_back(???);		//РЈРґР°Р»СЏРµС‚ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ РёР· РјР°СЃСЃРёРІР°++
+??? pop_front(???);		//РЈРґР°Р»СЏРµС‚ РЅСѓР»РµРІРѕР№ СЌР»РµРјРµРЅС‚ РёР· РјР°СЃСЃРёРІР°++
+??? erase(???);			//РЈРґР°Р»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ++
 
-??? allocate(???);		//Выделяет память под двумерный динамический массив++
-??? clear(???);			//Очищает память, занимаемую двумерным динамическим массивом++
-??? push_row_back(???);		//Добавляет строку в конец массива++
-??? push_row_front(???);	//Добавляет строку в начало массива++
-??? insert_row(???);	//Добавляет строку в двумерный динамический массив по указанному индексу++
-??? pop_row_back(???);		//Удаляет строку с конец массива++
-??? pop_row_front(???);		//Удаляет строку с начала массива++
-??? erase_row(???);		//Удаляет строку из двумерного динамического массива по указанному индексу++
-??? push_col_back(???);		//Добавляет столбец в конец массива++
-??? push_col_front(???);	//Добавляет столбец в начало массива++
-??? insert_col(???);	//Добавляет столбец в двумерный динамический массив по указанному индексу++
-??? pop_col_back(???);		//Удаляет столбец с конец массива++
-??? pop_col_front(???);		//Удаляет столбец с начала массива++
-??? erase_col(???);		//Удаляет столбец из двумерного динамического массива по указанному индексу
+??? allocate(???);		//Р’С‹РґРµР»СЏРµС‚ РїР°РјСЏС‚СЊ РїРѕРґ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ++
+??? clear(???);			//РћС‡РёС‰Р°РµС‚ РїР°РјСЏС‚СЊ, Р·Р°РЅРёРјР°РµРјСѓСЋ РґРІСѓРјРµСЂРЅС‹Рј РґРёРЅР°РјРёС‡РµСЃРєРёРј РјР°СЃСЃРёРІРѕРј++
+??? push_row_back(???);		//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°++
+??? push_row_front(???);	//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°++
+??? insert_row(???);	//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ++
+??? pop_row_back(???);		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ СЃ РєРѕРЅРµС† РјР°СЃСЃРёРІР°++
+??? pop_row_front(???);		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ СЃ РЅР°С‡Р°Р»Р° РјР°СЃСЃРёРІР°++
+??? erase_row(???);		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ РёР· РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ++
+??? push_col_back(???);		//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°++
+??? push_col_front(???);	//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°++
+??? insert_col(???);	//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ++
+??? pop_col_back(???);		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† СЃ РєРѕРЅРµС† РјР°СЃСЃРёРІР°++
+??? pop_col_front(???);		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† СЃ РЅР°С‡Р°Р»Р° РјР°СЃСЃРёРІР°++
+??? erase_col(???);		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† РёР· РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 */
 #include <iostream>
 #include<Windows.h>
@@ -30,157 +30,196 @@ void Print(???)			//Вывод массива на экран++
 
 using namespace std;
 
-void FillRand(int* Array, int length, int begin = 1, int end = 9);//Заполнение массива случайными числами
-void Print(const int* arr, size_t length); //Вывод массива на экран
-void push_back(int** array, size_t& length, int element); //Добавляет значение в конец массива
-void push_front(int** array, size_t& length, int element); //Добавляет значение в начало массива
-void insert(int** array, size_t& length, size_t position, int element); //Добавляет значение в массив по указанному индексу
-void pop_back(int** array, size_t& length); //Удаляет последний элемент из массива
-void pop_front(int** array, size_t& length); //Удаляет нулевой элемент из массива
-void erase(int** array, size_t& length, size_t position); //Удаляет значение из массива по указанному индексу
-int** allocate(size_t rows, size_t columns); //Выделяет память под двумерный динамический массив
-void clear(int** matrix, size_t rows, size_t columns); //Очищает память, занимаемую двумерным динамическим массивом
-int** push_row_back(int** matrix, size_t& rows, size_t columns);//Добавляет строку в конец массива
-int** push_row_front(int** matrix, size_t& rows, size_t columns);//Добавляет строку в начало массива
+void FillRand(int* Array, int length, int begin = 1, int end = 9);//Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
+void FillRand(double* Array, int length, int begin, int end, int acc);
+
+void Print(const int* arr, size_t length);//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
+
+void push_back(int** array, size_t& length, int element); //Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+void push_back(double** array, size_t& length, double element);
+
+void push_front(int** array, size_t& length, int element); //Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°
+
+
+void insert(int** array, size_t& length, size_t position, int element); //Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+void pop_back(int** array, size_t& length); //РЈРґР°Р»СЏРµС‚ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ РёР· РјР°СЃСЃРёРІР°
+void pop_front(int** array, size_t& length); //РЈРґР°Р»СЏРµС‚ РЅСѓР»РµРІРѕР№ СЌР»РµРјРµРЅС‚ РёР· РјР°СЃСЃРёРІР°
+void erase(int** array, size_t& length, size_t position); //РЈРґР°Р»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+int** allocate(size_t rows, size_t columns); //Р’С‹РґРµР»СЏРµС‚ РїР°РјСЏС‚СЊ РїРѕРґ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
+void clear(int** matrix, size_t rows, size_t columns); //РћС‡РёС‰Р°РµС‚ РїР°РјСЏС‚СЊ, Р·Р°РЅРёРјР°РµРјСѓСЋ РґРІСѓРјРµСЂРЅС‹Рј РґРёРЅР°РјРёС‡РµСЃРєРёРј РјР°СЃСЃРёРІРѕРј
+int** push_row_back(int** matrix, size_t& rows, size_t columns);//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+int** push_row_front(int** matrix, size_t& rows, size_t columns);//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°
 void PrintMatrix(int** matrix, size_t rows, size_t columns);
 void RandMatrix(int** Matrix, size_t rows, size_t columns, int begin = 1, int end = 9);
-int** push_col_back(int** matrix, size_t rows, size_t& columns);//Добавляет столбец в конец массива
-int** push_col_front(int** matrix, size_t rowns, size_t& columns);//Добавляет столбец в начало массива
-int** pop_row_back(int** matrix, size_t& rows, size_t columns);		//Удаляет строку с конец массива
-int** pop_row_front(int** matrix, size_t& rows, size_t columns);		//Удаляет строку с начала массива
-int** pop_col_back(int** matrix, size_t rows, size_t& columns);		//Удаляет столбец с конец массива
-int** pop_col_front(int** matrix, size_t rows, size_t& columns);		//Удаляет столбец с начала массива
-int** insert_row(int** matrix, size_t& rows, size_t columns, size_t index);//Добавляет строку в двумерный динамический массив по указанному индексу
-int** erase_row(int** matrix, size_t& rows, size_t columns, size_t index);		//Удаляет строку из двумерного динамического массива по указанному индексу
-int** insert_col(int** matrix, size_t rows, size_t& columns, size_t index);	//Добавляет столбец в двумерный динамический массив по указанному индексу
-int** erase_col(int** matrix, size_t rows, size_t& columns, size_t index);		//Удаляет столбец из двумерного динамического массива по указанному индексу
+int** push_col_back(int** matrix, size_t rows, size_t& columns);//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+int** push_col_front(int** matrix, size_t rowns, size_t& columns);//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°
+int** pop_row_back(int** matrix, size_t& rows, size_t columns);		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ СЃ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+int** pop_row_front(int** matrix, size_t& rows, size_t columns);		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ СЃ РЅР°С‡Р°Р»Р° РјР°СЃСЃРёРІР°
+int** pop_col_back(int** matrix, size_t rows, size_t& columns);		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† СЃ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+int** pop_col_front(int** matrix, size_t rows, size_t& columns);		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† СЃ РЅР°С‡Р°Р»Р° РјР°СЃСЃРёРІР°
+int** insert_row(int** matrix, size_t& rows, size_t columns, size_t index);//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+int** erase_row(int** matrix, size_t& rows, size_t columns, size_t index);		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ РёР· РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+int** insert_col(int** matrix, size_t rows, size_t& columns, size_t index);	//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+int** erase_col(int** matrix, size_t rows, size_t& columns, size_t index);		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† РёР· РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 
-
-
-
+//#define ARRAY_INT
+//#define MATRIX_INT
+//#define ARRAY_DOUBLE
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
+
+	
 	size_t index;
+	
 	size_t length;
-	cout << "Введите размер массива : ";
+#ifdef ARRAY_INT
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° : ";
 	cin >> length;
 	int* array = new int[length];
 	FillRand(array, length, 1, 10);
 	Print(array, length);
 
 	int element;
-	cout << "Добавление элемента в конец массива." << endl;
-	cout << "Введите элемент массива : ";
+	cout << "Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°." << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° : ";
 	cin >> element;
 	push_back(&array, length, element);
 	Print(array, length);
 
-	cout << "Добавление элемента в начало массива." << endl;
-	cout << "Введите элемент массива : ";
+	cout << "Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°." << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° : ";
 	cin >> element;
 	push_front(&array, length, element);
 	Print(array, length);
 
-	cout << "Добавление элемента массива по индексу." << endl;
-	cout << "Введите элемент массива : ";
+	cout << "Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР° РїРѕ РёРЅРґРµРєСЃСѓ." << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° : ";
 	cin >> element;
 
-	cout << "Введите индекс от 0 до " << length << " :";
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РѕС‚ 0 РґРѕ " << length << " :";
 	cin >> index;
 	insert(&array, length, index, element);
 	Print(array, length);
 
-	cout << "Удаление элемента в конец массива." << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°." << endl;
 	pop_back(&array, length);
 	Print(array, length);
 
-	cout << "Удаление элемента в начале массива." << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РЅР°С‡Р°Р»Рµ РјР°СЃСЃРёРІР°." << endl;
 	pop_front(&array, length);
 	Print(array, length);
 
-	cout << "Удаление элемента массива по индексу." << endl;
-	cout << "Введите индекс от 0 до " << length << " :";
+	cout << "РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР° РїРѕ РёРЅРґРµРєСЃСѓ." << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РѕС‚ 0 РґРѕ " << length << " :";
 	cin >> index;
 	erase(&array, length, index);
 	Print(array, length);
 	delete[] array;
+#endif ARRAY_INT
 
-	/*------------------------------------------------------*/
-
+#ifdef MATRIX_INT
 	size_t rows, columns;
-	cout << "Введите колличество строк матрицы : ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»Р»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РјР°С‚СЂРёС†С‹ : ";
 	cin >> rows;
-	cout << "Введите колличество столбцов матрицы : ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»Р»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РјР°С‚СЂРёС†С‹ : ";
 	cin >> columns;
 	int** matrix = allocate(rows, columns);
 	RandMatrix(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
 
-	cout << "Добавляет последнею строку матрицы" << endl;
+	cout << "Р”РѕР±Р°РІР»СЏРµС‚ РїРѕСЃР»РµРґРЅРµСЋ СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = push_row_back(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
-	cout << "Удаляет последнею строку матрицы" << endl;
+	cout << "РЈРґР°Р»СЏРµС‚ РїРѕСЃР»РµРґРЅРµСЋ СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = pop_row_back(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
 
-	cout << "Добавляет первую (нулевую) строку матрицы" << endl;
+	cout << "Р”РѕР±Р°РІР»СЏРµС‚ РїРµСЂРІСѓСЋ (РЅСѓР»РµРІСѓСЋ) СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = push_row_front(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
-	cout << "Удаляет первую (нулевую) строку матрицы" << endl;
+	cout << "РЈРґР°Р»СЏРµС‚ РїРµСЂРІСѓСЋ (РЅСѓР»РµРІСѓСЋ) СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = pop_row_front(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
 
-	cout << "Добавляет строку матрицы" << endl;
-	cout << "Введите индекс строки : ";
+	cout << "Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЃС‚СЂРѕРєРё : ";
 	cin >> index;
 	matrix = insert_row(matrix, rows, columns, index);
 	PrintMatrix(matrix, rows, columns);
-	cout << "Удаляет строку матрицы" << endl;
-	cout << "Введите индекс строки : ";
+	cout << "РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЃС‚СЂРѕРєРё : ";
 	cin >> index;
 	matrix = erase_row(matrix, rows, columns, index);
 	PrintMatrix(matrix, rows, columns);
 
-	cout << "Добавляет последнею колонку матрицы" << endl;
+	cout << "Р”РѕР±Р°РІР»СЏРµС‚ РїРѕСЃР»РµРґРЅРµСЋ РєРѕР»РѕРЅРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = push_col_back(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
-	cout << "Удаляет последнею колонку матрицы" << endl;
+	cout << "РЈРґР°Р»СЏРµС‚ РїРѕСЃР»РµРґРЅРµСЋ РєРѕР»РѕРЅРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = pop_col_back(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
 
-	cout << "Добавляет первую (нулевую) колонку матрицы" << endl;
+	cout << "Р”РѕР±Р°РІР»СЏРµС‚ РїРµСЂРІСѓСЋ (РЅСѓР»РµРІСѓСЋ) РєРѕР»РѕРЅРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = push_col_front(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
-	cout << "Удаляет первую (нулевую) колонку матрицы" << endl;
+	cout << "РЈРґР°Р»СЏРµС‚ РїРµСЂРІСѓСЋ (РЅСѓР»РµРІСѓСЋ) РєРѕР»РѕРЅРєСѓ РјР°С‚СЂРёС†С‹" << endl;
 	matrix = pop_col_front(matrix, rows, columns);
 	PrintMatrix(matrix, rows, columns);
 
-	cout << "Добавляет колонку матрицы" << endl;
-	cout << "Введите индекс колонки : ";
+	cout << "Р”РѕР±Р°РІР»СЏРµС‚ РєРѕР»РѕРЅРєСѓ РјР°С‚СЂРёС†С‹" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РєРѕР»РѕРЅРєРё : ";
 	cin >> index;
 	matrix = insert_col(matrix, rows, columns, index);
 	PrintMatrix(matrix, rows, columns);
-	cout << "Удаление колонки матрицы" << endl;
-	cout << "Введите индекс колонки : ";
+	cout << "РЈРґР°Р»РµРЅРёРµ РєРѕР»РѕРЅРєРё РјР°С‚СЂРёС†С‹" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РєРѕР»РѕРЅРєРё : ";
 	cin >> index;
 	matrix = erase_col(matrix, rows, columns, index);
 	PrintMatrix(matrix, rows, columns);
 
 	clear(matrix, rows, columns);
+#endif MATRIX_INT
+
+//#ifdef ARRAY_DOUBLE
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° : ";
+	cin >> length;
+	double* arr_double = new double[length];
+	FillRand(arr_double, length, 0, 10, 2);
+	for (size_t i = 0; i < length; i++)
+	{
+		cout << arr_double[i]<<" ";
+	}
+
+	delete[]arr_double;
+//#endif ARRAY_DOUBLE
+
+
+
+
 
 	return 0;
 }
 
-void FillRand(int* Array, int length, int begin, int end)//Заполнение массива случайными числами
+void FillRand(int* Array, int length, int begin, int end)//Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 {
 	for (size_t i = 0; i < length; i++)
 		*(Array + i) = rand() % (end - begin + 1) + begin;
 }
 
-void Print(const int* arr, size_t length)//Вывод массива на экран
+void FillRand(double* Array, int length, int begin, int end, int acc)
+{
+	int n = 1;
+	for (size_t i = 0; i < acc; i++) n *= 10;
+	long long b = (long long)(begin * n);
+	long long e = (long long)(end * n);
+	for (size_t i = 0; i < length; i++)
+		*(Array + i) =(double)(rand() % (e - b + 1) + b)/n;
+}
+
+void Print(const int* arr, size_t length)//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 {
 	for (size_t i = 0; i < length; i++)
 	{
@@ -189,7 +228,7 @@ void Print(const int* arr, size_t length)//Вывод массива на экран
 	cout << endl;
 }
 
-void push_back(int** array, size_t& length, int element)//Добавляет значение в конец массива
+void push_back(int** array, size_t& length, int element)//Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
 {
 	++length;
 	int* arr = *array;
@@ -204,7 +243,22 @@ void push_back(int** array, size_t& length, int element)//Добавляет значение в к
 	delete[] tmp;
 }
 
-void push_front(int** array, size_t& length, int element)//Добавляет значение в начало массива
+void push_back(double** array, size_t& length, double element)
+{
+	++length;
+	double* arr = *array;
+	double* tmp = new double[length];
+	for (size_t i = 0; i < length - 1; i++)
+	{
+		tmp[i] = arr[i];
+	}
+	tmp[length - 1] = element;
+	*array = tmp;
+	tmp = arr;
+	delete[] tmp;
+}
+
+void push_front(int** array, size_t& length, int element)//Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°
 {
 	++length;
 	int* arr = *array;
@@ -220,7 +274,7 @@ void push_front(int** array, size_t& length, int element)//Добавляет значение в 
 
 }
 
-void insert(int** array, size_t& length, size_t position, int element)//Добавляет значение в массив по указанному индексу
+void insert(int** array, size_t& length, size_t position, int element)//Р”РѕР±Р°РІР»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 {
 	++length;
 	int* arr = *array;
@@ -244,7 +298,7 @@ void insert(int** array, size_t& length, size_t position, int element)//Добавляе
 
 }
 
-void pop_back(int** array, size_t& length)//Удаляет последний элемент из массива
+void pop_back(int** array, size_t& length)//РЈРґР°Р»СЏРµС‚ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ РёР· РјР°СЃСЃРёРІР°
 {
 	length--;
 	int* arr = *array;
@@ -261,7 +315,7 @@ void pop_back(int** array, size_t& length)//Удаляет последний элемент из массива
 
 }
 
-void pop_front(int** array, size_t& length)//Удаляет нулевой элемент из массива
+void pop_front(int** array, size_t& length)//РЈРґР°Р»СЏРµС‚ РЅСѓР»РµРІРѕР№ СЌР»РµРјРµРЅС‚ РёР· РјР°СЃСЃРёРІР°
 {
 	length--;
 	int* arr = *array;
@@ -276,7 +330,7 @@ void pop_front(int** array, size_t& length)//Удаляет нулевой элемент из массива
 	delete[] tmp;
 }
 
-void erase(int** array, size_t& length, size_t position)//Удаляет значение из массива по указанному индексу
+void erase(int** array, size_t& length, size_t position)//РЈРґР°Р»СЏРµС‚ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 {
 	length--;
 	int* arr = *array;
@@ -298,7 +352,7 @@ void erase(int** array, size_t& length, size_t position)//Удаляет значение из ма
 	delete[] tmp;
 }
 
-int** allocate(size_t rowns, size_t columns)//Выделяет память под двумерный динамический массив
+int** allocate(size_t rowns, size_t columns)//Р’С‹РґРµР»СЏРµС‚ РїР°РјСЏС‚СЊ РїРѕРґ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 {
 	int** matrix = new int* [rowns];
 	for (size_t i = 0; i < rowns; i++)
@@ -306,7 +360,7 @@ int** allocate(size_t rowns, size_t columns)//Выделяет память под двумерный дина
 	return matrix;
 }
 
-void clear(int** matrix, size_t rows, size_t columns)//Очищает память, занимаемую двумерным динамическим массивом
+void clear(int** matrix, size_t rows, size_t columns)//РћС‡РёС‰Р°РµС‚ РїР°РјСЏС‚СЊ, Р·Р°РЅРёРјР°РµРјСѓСЋ РґРІСѓРјРµСЂРЅС‹Рј РґРёРЅР°РјРёС‡РµСЃРєРёРј РјР°СЃСЃРёРІРѕРј
 {
 	for (size_t i = 0; i < rows; i++)
 		delete matrix[i];
@@ -326,7 +380,7 @@ int** push_row_back(int** matrix, size_t& rows, size_t columns)//
 	return tmp;
 }
 
-int** push_row_front(int** matrix, size_t& rows, size_t columns)//Добавляет строку в начало массива---
+int** push_row_front(int** matrix, size_t& rows, size_t columns)//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°---
 {
 	int** tmp = new int* [rows + 1]{};
 	for (size_t i = 1; i < rows + 1; i++)
@@ -339,7 +393,7 @@ int** push_row_front(int** matrix, size_t& rows, size_t columns)//Добавляет стро
 	return tmp;
 }
 
-int** push_col_back(int** matrix, size_t rows, size_t& columns)//Добавляет столбец в конец массива
+int** push_col_back(int** matrix, size_t rows, size_t& columns)//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
 {
 
 	for (size_t i = 0; i < rows; i++)
@@ -352,7 +406,7 @@ int** push_col_back(int** matrix, size_t rows, size_t& columns)//Добавляет столб
 	return matrix;
 }
 
-int** push_col_front(int** matrix, size_t rows, size_t& columns)//Добавляет столбец в начало массива
+int** push_col_front(int** matrix, size_t rows, size_t& columns)//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°
 {
 	for (size_t i = 0; i < rows; i++)
 	{
@@ -364,7 +418,7 @@ int** push_col_front(int** matrix, size_t rows, size_t& columns)//Добавляет стол
 	return matrix;
 }
 
-int** pop_row_back(int** matrix, size_t& rows, size_t columns)//Удаляет строку с конец массива
+int** pop_row_back(int** matrix, size_t& rows, size_t columns)//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ СЃ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
 {
 	int** tmp = new int* [rows - 1];
 	for (size_t i = 0; i < rows - 1; i++)
@@ -376,7 +430,7 @@ int** pop_row_back(int** matrix, size_t& rows, size_t columns)//Удаляет строку с
 	return tmp;
 }
 
-int** pop_row_front(int** matrix, size_t& rows, size_t columns)		//Удаляет строку с начала массива
+int** pop_row_front(int** matrix, size_t& rows, size_t columns)		//РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ СЃ РЅР°С‡Р°Р»Р° РјР°СЃСЃРёРІР°
 {
 	int** tmp = new int* [rows - 1];
 	for (size_t i = 0; i < rows - 1; i++)
@@ -388,7 +442,7 @@ int** pop_row_front(int** matrix, size_t& rows, size_t columns)		//Удаляет строк
 	return tmp;
 }
 
-int** pop_col_back(int** matrix, size_t rows, size_t& columns)//Удаляет столбец с конец массива
+int** pop_col_back(int** matrix, size_t rows, size_t& columns)//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† СЃ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
 {
 	for (size_t i = 0; i < rows; i++)
 	{
@@ -400,7 +454,7 @@ int** pop_col_back(int** matrix, size_t rows, size_t& columns)//Удаляет столбец 
 	return matrix;
 }
 
-int** pop_col_front(int** matrix, size_t rows, size_t& columns)		//Удаляет столбец с начала массива
+int** pop_col_front(int** matrix, size_t rows, size_t& columns)		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† СЃ РЅР°С‡Р°Р»Р° РјР°СЃСЃРёРІР°
 {
 	for (size_t i = 0; i < rows; i++)
 	{
@@ -412,7 +466,7 @@ int** pop_col_front(int** matrix, size_t rows, size_t& columns)		//Удаляет столб
 	return matrix;
 }
 
-int** insert_row(int** matrix, size_t& rows, size_t columns, size_t index)//Добавляет строку в двумерный динамический массив по указанному индексу
+int** insert_row(int** matrix, size_t& rows, size_t columns, size_t index)//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 {
 	if (index > rows)return matrix;
 
@@ -427,7 +481,7 @@ int** insert_row(int** matrix, size_t& rows, size_t columns, size_t index)//Доба
 	return tmp;
 }
 
-int** erase_row(int** matrix, size_t& rows, size_t columns, size_t index) //Удаляет строку из двумерного динамического массива по указанному индексу
+int** erase_row(int** matrix, size_t& rows, size_t columns, size_t index) //РЈРґР°Р»СЏРµС‚ СЃС‚СЂРѕРєСѓ РёР· РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 {
 	int** tmp = new int* [rows - 1];
 	if (index >= rows)return matrix;
@@ -444,7 +498,7 @@ int** erase_row(int** matrix, size_t& rows, size_t columns, size_t index) //Удал
 	return tmp;
 }
 
-int** insert_col(int** matrix, size_t rows, size_t& columns, size_t index)	//Добавляет столбец в двумерный динамический массив по указанному индексу
+int** insert_col(int** matrix, size_t rows, size_t& columns, size_t index)	//Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 {
 	if (index > columns) return matrix;
 
@@ -458,7 +512,7 @@ int** insert_col(int** matrix, size_t rows, size_t& columns, size_t index)	//Доб
 	return matrix;
 }
 
-int** erase_col(int** matrix, size_t rows, size_t& columns, size_t index)		//Удаляет столбец из двумерного динамического массива по указанному индексу
+int** erase_col(int** matrix, size_t rows, size_t& columns, size_t index)		//РЈРґР°Р»СЏРµС‚ СЃС‚РѕР»Р±РµС† РёР· РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 {
 	if (index >= columns) return matrix;
 
