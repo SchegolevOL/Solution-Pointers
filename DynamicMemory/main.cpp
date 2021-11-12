@@ -32,7 +32,7 @@ using namespace std;
 
 void FillRand(int* Array, int length, int begin = 1, int end = 9);//Заполнение массива случайными числами
 void FillRand(double* Array, int length, int begin, int end, int acc);
-void FillRand(char* Array, int length, char begin = 0, char end = 255);
+void FillRand(char* Array, size_t length, char begin = 0, char end = 255);
 
 template<typename T> void Print(const T* arr, size_t length);//Вывод массива на экран
 
@@ -103,7 +103,7 @@ int main()
 	size_t index;
 	
 	size_t length;
-	/*cout << "Массив типа int. " << endl;
+	cout << "Массив типа int. " << endl;
 	cout << "Введите размер массива : ";
 	cin >> length;
 	int* arrayINT = new int[length];
@@ -145,9 +145,9 @@ int main()
 	cin >> index;
 	erase(arrayINT, length, index);
 	Print(arrayINT, length);
-	delete[] arrayINT;*/
+	delete[] arrayINT;
 
-	/*cout << "Массив типа double. " << endl;
+	cout << "Массив типа double. " << endl;
 	cout << "Введите размер массива : ";
 	cin >> length;
 	double* arrayDOUBLE = new double[length];
@@ -189,9 +189,9 @@ int main()
 	cin >> index;
 	erase(arrayDOUBLE, length, index);
 	Print(arrayDOUBLE, length);
-	delete[] arrayDOUBLE;*/
+	delete[] arrayDOUBLE;
 
-	/*cout << "Массив типа double. " << endl;
+	cout << "Массив типа char. " << endl;
 	cout << "Введите размер массива : ";
 	cin >> length;
 	char* arrayCHAR = new char[length];
@@ -233,10 +233,10 @@ int main()
 	cin >> index;
 	erase(arrayCHAR, length, index);
 	Print(arrayCHAR, length);
-	delete[] arrayCHAR;*/
+	delete[] arrayCHAR;
 
 	size_t rows, columns;
-	/*cout << "Матрица INT" << endl;
+	cout << "Матрица INT" << endl;
 	cout << "Введите колличество строк матрицы : ";
 	cin >> rows;
 	cout << "Введите колличество столбцов матрицы : ";
@@ -295,9 +295,9 @@ int main()
 	erase_col(matrixINT, rows, columns, index);
 	PrintMatrix(matrixINT, rows, columns);
 
-	clear(matrixINT, rows, columns);*/
+	clear(matrixINT, rows, columns);
 
-	/*cout << "Матрица DOUBLE" << endl;
+	cout << "Матрица DOUBLE" << endl;
 	cout << "Введите колличество строк матрицы : ";
 	cin >> rows;
 	cout << "Введите колличество столбцов матрицы : ";
@@ -356,7 +356,7 @@ int main()
 	erase_col(matrixDOUBLE, rows, columns, index);
 	PrintMatrix(matrixDOUBLE, rows, columns);
 
-	clear(matrixDOUBLE, rows, columns);*/
+	clear(matrixDOUBLE, rows, columns);
 cout << "Матрица CHAR" << endl;
 cout << "Введите колличество строк матрицы : ";
 cin >> rows;
