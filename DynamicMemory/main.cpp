@@ -1,27 +1,8 @@
-﻿/*void FillRand(???)		//Заполнение массива случайными числами++
-void Print(???)			//Вывод массива на экран++
+﻿/*Создать ветку DynamicOverload, и в этой ветке перегрузить функции из предыдущего задания 
+для одномерных и двумерных массивов типа double и char.
+Для каждой функции написать проверочный код.
+(Функции можно шаблонизировать, только тогда ветка будет DynamicTemplated)
 
-??? push_back(???);		//Добавляет значение в конец массива++
-??? push_front(???);	//Добавляет значение в начало массива++
-??? insert(???);		//Добавляет значение в массив по указанному индексу++
-??? pop_back(???);		//Удаляет последний элемент из массива++
-??? pop_front(???);		//Удаляет нулевой элемент из массива++
-??? erase(???);			//Удаляет значение из массива по указанному индексу++
-
-??? allocate(???);		//Выделяет память под двумерный динамический массив++
-??? clear(???);			//Очищает память, занимаемую двумерным динамическим массивом++
-??? push_row_back(???);		//Добавляет строку в конец массива++
-??? push_row_front(???);	//Добавляет строку в начало массива++
-??? insert_row(???);	//Добавляет строку в двумерный динамический массив по указанному индексу++
-??? pop_row_back(???);		//Удаляет строку с конец массива++
-??? pop_row_front(???);		//Удаляет строку с начала массива++
-??? erase_row(???);		//Удаляет строку из двумерного динамического массива по указанному индексу++
-??? push_col_back(???);		//Добавляет столбец в конец массива++
-??? push_col_front(???);	//Добавляет столбец в начало массива++
-??? insert_col(???);	//Добавляет столбец в двумерный динамический массив по указанному индексу++
-??? pop_col_back(???);		//Удаляет столбец с конец массива++
-??? pop_col_front(???);		//Удаляет столбец с начала массива++
-??? erase_col(???);		//Удаляет столбец из двумерного динамического массива по указанному индексу
 */
 #include <iostream>
 #include<Windows.h>
@@ -33,76 +14,41 @@ using namespace std;
 void FillRand(int* Array, int length, int begin = 1, int end = 9);//Заполнение массива случайными числами
 void FillRand(double* Array, int length, int begin, int end, int acc);
 void FillRand(char* Array, size_t length, char begin = 0, char end = 255);
-
 template<typename T> void Print(const T* arr, size_t length);//Вывод массива на экран
-
 template<typename T>void push_back(T*& array, size_t& length, T element); //Добавляет значение в конец массива
-
 template<typename T> void push_front(T*& array, size_t& length, T element); //Добавляет значение в начало массива
-
-
 template<typename T> void insert(T*& array, size_t& length, size_t position, T element); //Добавляет значение в массив по указанному индексу
-
 template<typename T> void pop_back(T*& array, size_t& length); //Удаляет последний элемент из массива
-
 template<typename T> void pop_front(T*& array, size_t& length); //Удаляет нулевой элемент из массива
-
-
 template<typename T> void erase(T*& array, size_t& length, size_t position); //Удаляет значение из массива по указанному индексу
-
 template<typename T> T** allocate(size_t rows, size_t columns); //Выделяет память под двумерный динамический массив
-
-
 template<typename T> void clear(T** matrix, size_t rows, size_t columns); //Очищает память, занимаемую двумерным динамическим массивом
-
-
 template<typename T> void push_row_back(T**& matrix, size_t& rows, size_t columns);//Добавляет строку в конец массива
-
-
 template<typename T> void push_row_front(T**& matrix, size_t& rows, size_t columns);//Добавляет строку в начало массива
-
 template<typename T> void push_col_back(T**& matrix, size_t rows, size_t& columns);//Добавляет столбец в конец массива
-
 template<typename T> void push_col_front(T**& matrix, size_t rowns, size_t& columns);//Добавляет столбец в начало массива
-
-
 template<typename T> void pop_row_back(T**& matrix, size_t& rows, size_t columns);		//Удаляет строку с конец массива
-
 template<typename T> void pop_row_front(T**& matrix, size_t& rows);		//Удаляет строку с начала массива
-
 template<typename T> void pop_col_back(T**& matrix, size_t rows, size_t& columns);		//Удаляет столбец с конец массива
-
 template<typename T> void pop_col_front(T**& matrix, size_t rows, size_t& columns);		//Удаляет столбец с начала массива
-
-
 template<typename T> void insert_row(T**& matrix, size_t& rows, size_t columns, size_t index);//Добавляет строку в двумерный динамический массив по указанному индексу
-
 template<typename T> void erase_row(T**& matrix, size_t& rows, size_t index);		//Удаляет строку из двумерного динамического массива по указанному индексу
-
-
 template<typename T> void insert_col(T**& matrix, size_t rows, size_t& columns, size_t index);	//Добавляет столбец в двумерный динамический массив по указанному индексу
-
-
 template<typename T> void erase_col(T**& matrix, size_t rows, size_t& columns, size_t index);		//Удаляет столбец из двумерного динамического массива по указанному индексу
-
-
-
 template<typename T> void PrintMatrix(T** matrix, size_t rows, size_t columns);
-
 void RandMatrix(int** Matrix, size_t rows, size_t columns, int begin = 1, int end = 9);
-void RandMatrix(double** Matrix, size_t rowns, size_t columns, int begin, int end, int acc);
-void RandMatrix(char** Matrix, size_t rowns, size_t columns, char begin, char end);
+void RandMatrix(double** Matrix, size_t rowns, size_t columns, int begin=1, int end=9, int acc=2);
+void RandMatrix(char** Matrix, size_t rowns, size_t columns, char begin=0, char end=255);
 
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
-
-	
+		
 	size_t index;
-	
 	size_t length;
+
 	cout << "Массив типа int. " << endl;
 	cout << "Введите размер массива : ";
 	cin >> length;
@@ -357,70 +303,71 @@ int main()
 	PrintMatrix(matrixDOUBLE, rows, columns);
 
 	clear(matrixDOUBLE, rows, columns);
-cout << "Матрица CHAR" << endl;
-cout << "Введите колличество строк матрицы : ";
-cin >> rows;
-cout << "Введите колличество столбцов матрицы : ";
-cin >> columns;
-char** matrixCHAR = allocate<char>(rows, columns);
-RandMatrix(matrixCHAR, rows, columns, 'a', 'z');
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Матрица CHAR" << endl;
+	cout << "Введите колличество строк матрицы : ";
+	cin >> rows;
+	cout << "Введите колличество столбцов матрицы : ";
+	cin >> columns;
+	char** matrixCHAR = allocate<char>(rows, columns);
+	RandMatrix(matrixCHAR, rows, columns, 'a', 'z');
+	PrintMatrix(matrixCHAR, rows, columns);
 
-cout << "Добавляет последнею строку матрицы" << endl;
-push_row_back(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
-cout << "Удаляет последнею строку матрицы" << endl;
-pop_row_back(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Добавляет последнею строку матрицы" << endl;
+	push_row_back(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Удаляет последнею строку матрицы" << endl;
+	pop_row_back(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
 
-cout << "Добавляет первую (нулевую) строку матрицы" << endl;
-push_row_front(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
-cout << "Удаляет первую (нулевую) строку матрицы" << endl;
-pop_row_front(matrixCHAR, rows);
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Добавляет первую (нулевую) строку матрицы" << endl;
+	push_row_front(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Удаляет первую (нулевую) строку матрицы" << endl;
+	pop_row_front(matrixCHAR, rows);
+	PrintMatrix(matrixCHAR, rows, columns);
 
-cout << "Добавляет строку матрицы" << endl;
-cout << "Введите индекс строки : ";
-cin >> index;
-insert_row(matrixCHAR, rows, columns, index);
-PrintMatrix(matrixCHAR, rows, columns);
-cout << "Удаляет строку матрицы" << endl;
-cout << "Введите индекс строки : ";
-cin >> index;
-erase_row(matrixCHAR, rows, index);
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Добавляет строку матрицы" << endl;
+	cout << "Введите индекс строки : ";
+	cin >> index;
+	insert_row(matrixCHAR, rows, columns, index);
+	PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Удаляет строку матрицы" << endl;
+	cout << "Введите индекс строки : ";
+	cin >> index;
+	erase_row(matrixCHAR, rows, index);
+	PrintMatrix(matrixCHAR, rows, columns);
 
-cout << "Добавляет последнею колонку матрицы" << endl;
-push_col_back(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
-cout << "Удаляет последнею колонку матрицы" << endl;
-pop_col_back(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Добавляет последнею колонку матрицы" << endl;
+	push_col_back(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Удаляет последнею колонку матрицы" << endl;
+	pop_col_back(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
 
-cout << "Добавляет первую (нулевую) колонку матрицы" << endl;
-push_col_front(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
-cout << "Удаляет первую (нулевую) колонку матрицы" << endl;
-pop_col_front(matrixCHAR, rows, columns);
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Добавляет первую (нулевую) колонку матрицы" << endl;
+	push_col_front(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Удаляет первую (нулевую) колонку матрицы" << endl;
+	pop_col_front(matrixCHAR, rows, columns);
+	PrintMatrix(matrixCHAR, rows, columns);
 
-cout << "Добавляет колонку матрицы" << endl;
-cout << "Введите индекс колонки : ";
-cin >> index;
-insert_col(matrixCHAR, rows, columns, index);
-PrintMatrix(matrixCHAR, rows, columns);
-cout << "Удаление колонки матрицы" << endl;
-cout << "Введите индекс колонки : ";
-cin >> index;
-erase_col(matrixCHAR, rows, columns, index);
-PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Добавляет колонку матрицы" << endl;
+	cout << "Введите индекс колонки : ";
+	cin >> index;
+	insert_col(matrixCHAR, rows, columns, index);
+	PrintMatrix(matrixCHAR, rows, columns);
+	cout << "Удаление колонки матрицы" << endl;
+	cout << "Введите индекс колонки : ";
+	cin >> index;
+	erase_col(matrixCHAR, rows, columns, index);
+	PrintMatrix(matrixCHAR, rows, columns);
 
-clear(matrixCHAR, rows, columns);
+	clear(matrixCHAR, rows, columns);
 
 
 	return 0;
 }
+
 void FillRand(int* Array, int length, int begin, int end)//Заполнение массива случайными числами
 {
 	for (size_t i = 0; i < length; i++)
