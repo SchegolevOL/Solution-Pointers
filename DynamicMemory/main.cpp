@@ -2,20 +2,16 @@
 для одномерных и двумерных массивов типа double и char.
 Для каждой функции написать проверочный код.
 (Функции можно шаблонизировать, только тогда ветка будет DynamicTemplated)
-
 */
 #include <iostream>
 #include<Windows.h>
 #include<time.h>
 #include <stdlib.h>
+#include"FillRand.h"
+#include"Print.h"
+#include"Print.cpp"
 
-using namespace std;
-
-void FillRand(int* Array, int length, int begin = 1, int end = 9);//Заполнение массива случайными числами
-void FillRand(double* Array, int length, int begin, int end, int acc);
-void FillRand(char* Array, size_t length, char begin = 0, char end = 255);
-template<typename T> void Print(const T* arr, size_t length);//Вывод массива на экран
-template<typename T>void push_back(T*& array, size_t& length, T element); //Добавляет значение в конец массива
+template<typename T> void push_back(T*& array, size_t& length, T element); //Добавляет значение в конец массива
 template<typename T> void push_front(T*& array, size_t& length, T element); //Добавляет значение в начало массива
 template<typename T> void insert(T*& array, size_t& length, size_t position, T element); //Добавляет значение в массив по указанному индексу
 template<typename T> void pop_back(T*& array, size_t& length); //Удаляет последний элемент из массива
@@ -36,12 +32,9 @@ template<typename T> void erase_row(T**& matrix, size_t& rows, size_t index);		/
 template<typename T> void insert_col(T**& matrix, size_t rows, size_t& columns, size_t index);	//Добавляет столбец в двумерный динамический массив по указанному индексу
 template<typename T> void erase_col(T**& matrix, size_t rows, size_t& columns, size_t index);		//Удаляет столбец из двумерного динамического массива по указанному индексу
 template<typename T> void PrintMatrix(T** matrix, size_t rows, size_t columns);
-void RandMatrix(int** Matrix, size_t rows, size_t columns, int begin = 1, int end = 9);
-void RandMatrix(double** Matrix, size_t rowns, size_t columns, int begin=1, int end=9, int acc=2);
-void RandMatrix(char** Matrix, size_t rowns, size_t columns, char begin=0, char end=255);
-
 int main()
 {
+	using namespace std;
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
@@ -368,37 +361,6 @@ int main()
 	return 0;
 }
 
-void FillRand(int* Array, int length, int begin, int end)//Заполнение массива случайными числами
-{
-	for (size_t i = 0; i < length; i++)
-		*(Array + i) = rand() % (end - begin + 1) + begin;
-}
-
-void FillRand(double* Array, int length, int begin, int end, int acc)
-{
-	int n = 1;
-	for (size_t i = 0; i < acc; i++) n *= 10;
-	long long b = begin * n;
-	long long e = end * n;
-	for (size_t i = 0; i < length; i++)
-		*(Array + i) = (double)(rand() % (e - b + 1) + b) / n;
-}
-
-void FillRand(char* Array, size_t length, char begin, char end)
-{
-	for (size_t i = 0; i < length; i++)
-		*(Array + i) = rand() % (end - begin + 1) + begin;
-}
-
-template<typename T> void Print(const T* arr, size_t length)//Вывод массива на экран
-{
-	for (size_t i = 0; i < length; i++)
-	{
-		cout << arr[i] << " ";
-	}
-	cout << endl;
-}
-
 template<typename T> void push_back(T*& array, size_t& length, T element)//Добавляет значение в конец массива
 {
 	++length;
@@ -604,39 +566,3 @@ template<typename T> void erase_col(T**& matrix, size_t rows, size_t& columns, s
 	columns--;
 }
 
-template<typename T> void PrintMatrix(T** matrix, size_t rows, size_t columns)
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		for (size_t j = 0; j < columns; j++)
-		{
-			cout << matrix[i][j] << "   ";
-		}
-		cout << endl;
-	}
-	cout << endl;
-}
-
-void RandMatrix(int** Matrix, size_t rows, size_t colums, int begin, int end)
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		FillRand(Matrix[i], colums, begin, end);
-	}
-}
-
-void RandMatrix(double** Matrix, size_t rows, size_t colums, int begin, int end, int acc)
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		FillRand(Matrix[i], colums, begin, end, acc);
-	}
-}
-
-void RandMatrix(char** Matrix, size_t rows, size_t colums, char begin, char end)
-{
-	for (size_t i = 0; i < rows; i++)
-	{
-		FillRand(Matrix[i], colums, begin, end);
-	}
-}
