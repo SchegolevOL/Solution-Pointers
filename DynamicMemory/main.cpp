@@ -541,11 +541,13 @@ template <typename T> void push_col_front(T**& matrix, size_t rows, size_t& colu
 
 template <typename T> void pop_row_back(T**& matrix, size_t& rows, size_t columns)//Удаляет строку с конец массива
 {
+	delete[] matrix[rows-1];
 	pop_back(matrix, rows);
 }
 
 template<typename T> void pop_row_front(T**& matrix, size_t& rows)		//Удаляет строку с начала массива
 {
+	delete[]matrix[0];
 	pop_front(matrix, rows);
 }
 
@@ -554,7 +556,6 @@ template <typename T> void pop_col_back(T**& matrix, size_t rows, size_t& column
 	for (size_t i = 0; i < rows; i++)
 	{
 		size_t tmp = columns;
-		T* arr = new T[tmp] {};
 		pop_back(matrix[i], tmp);
 	}
 	columns--;
@@ -565,7 +566,6 @@ template <typename T> void pop_col_front(T**& matrix, size_t rows, size_t& colum
 	for (size_t i = 0; i < rows; i++)
 	{
 		size_t tmp = columns;
-		T* arr = new T[tmp - 1]{};
 		pop_front(matrix[i], tmp);
 	}
 	columns--;
@@ -579,14 +579,15 @@ template <typename T> void insert_row(T**& matrix, size_t& rows, size_t columns,
 
 template<typename T> void erase_row(T**& matrix, size_t& rows, size_t index) //Удаляет строку из двумерного динамического массива по указанному индексу
 {
+	delete[] matrix[index];
 	erase(matrix, rows, index);
 }
 
 template<typename T> void insert_col(T**& matrix, size_t rows, size_t& columns, size_t index)	//Добавляет столбец в двумерный динамический массив по указанному индексу
-{
-	size_t tmp = columns;
+{	
 	for (size_t i = 0; i < rows; i++)
 	{
+		size_t tmp = columns;
 		T* arr = new T[columns + 1]{};
 		insert(matrix[i], tmp, index, *arr);
 	}
@@ -598,7 +599,6 @@ template<typename T> void erase_col(T**& matrix, size_t rows, size_t& columns, s
 	for (size_t i = 0; i < rows; i++)
 	{
 		size_t tmp = columns;
-		T* arr = new T[tmp - 1]{};
 		erase(matrix[i], tmp, index);
 	}
 	columns--;
