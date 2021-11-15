@@ -378,8 +378,8 @@ void FillRand(double* Array, int length, int begin, int end, int acc)
 {
 	int n = 1;
 	for (size_t i = 0; i < acc; i++) n *= 10;
-	long long b = (long long)(begin * n);
-	long long e = (long long)(end * n);
+	long long b = begin * n;
+	long long e = end * n;
 	for (size_t i = 0; i < length; i++)
 		*(Array + i) = (double)(rand() % (e - b + 1) + b) / n;
 }
@@ -505,7 +505,7 @@ template<typename T> void clear(T** matrix, size_t rows, size_t columns)//Очи
 	delete[] matrix;
 }
 
-template<typename T> void push_row_back(T**& matrix, size_t& rows, size_t columns)// 
+template<typename T> void push_row_back(T**& matrix, size_t& rows, size_t columns)// Добавляет столбец в конец массива
 {
 	T* tmp = new T [columns]{};
 	push_back(matrix, rows, tmp);
